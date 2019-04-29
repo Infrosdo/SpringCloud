@@ -17,7 +17,7 @@ public class DepartCodeConfig {
     }
 
     @Bean
-    public IRule roundbalanceRule() {
+    public IRule roundBalanceRule() {
         return new RandomRule();
     }
 }

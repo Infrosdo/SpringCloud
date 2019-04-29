@@ -20,7 +20,6 @@ public class DepartController {
 
     @PostMapping("/save")
     public boolean saveHandle(@RequestBody Depart depart) {
-        depart.setDbase("test03");
         return service.saveDepart(depart);
     }
 
@@ -31,7 +30,6 @@ public class DepartController {
 
     @PutMapping("/update")
     public boolean updateHandle(@RequestBody Depart depart) {
-        depart.setDbase("test03");
         return service.modifyDepart(depart);
     }
 
