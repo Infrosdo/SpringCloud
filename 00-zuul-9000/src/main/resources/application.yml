@@ -1,0 +1,24 @@
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka
+spring:
+  application:
+    name: abcmsc-zuul-gateway
+zuul:
+  routes:
+    service8080.serviceId: abcmsc-consumer-depart
+    service8080.path: /abc8080/**
+
+    service8090.serviceId: abcmsc-consumer-depart-8090
+    service8090.path: /abc8090/**
+
+    host:
+        connect-timeout-millis: 15000
+        socket-timeout-millis: 60000
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 10000
